@@ -5,30 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylessheet.css">
+    <script src="javascript.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-        <h1>Tic-Tac-Toe</h1>
-        <div class="gameBoard">
-            <div id="game-board" class="board">
-                <div class="row">
-                    <div class="cell" id="1"></div>
-                    <div class="cell" id="2"></div>
-                    <div class="cell" id="3"></div>
-                </div>
-                <div class="row">
-                    <div class="cell" id="4"></div>
-                    <div class="cell" id="5"></div>
-                    <div class="cell" id="6"></div>
-                </div>
-                <div class="row">
-                    <div class="cell" id="7"></div>
-                    <div class="cell" id="8"></div>
-                    <div class="cell" id="9"></div>
-                </div>
+
+
+    <button id="start-button">Start Game</button>
+    <div class="playerchoice" id="choice-form">
+        <form>
+            <p>Player 1, choose 'X' or 'O':</p>
+            <label>
+                <input type="radio" name="choice" value="X" required> X
+            </label>
+            <label>
+                <input type="radio" name="choice" value="O"> O
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="gameBoard">
+        <div id="game-board" class="board">
+            <div class="row">
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+                <div class="cell" id="9"></div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
