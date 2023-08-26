@@ -212,15 +212,3 @@ label[for="player2name"] {
 }
 
 
-@media screen and (max-width: 600px) {
-    /* Change the layout for smaller screens */
-    #game-board {
-        grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
-    }
-
-    .titlecont {
-        grid-template-columns: 1fr; /* Adjust the number of columns */
-    }
-
-    /* Add more responsive styles as needed */
-}

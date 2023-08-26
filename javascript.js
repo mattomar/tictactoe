@@ -1,7 +1,5 @@
 (function () {
-    // Define the Tic Tac Toe game
     function startTicTacToeGame() {
-        // Initialize the game board
         const gameBoard = [
             { id: 1, value: '' },
             { id: 2, value: '' },
@@ -14,9 +12,7 @@
             { id: 9, value: '' }
         ];
 
-        // Wait for the DOM to be ready
         document.addEventListener('DOMContentLoaded', function () {
-            // DOM elements
             const startButton = document.getElementById('start-button');
             const choiceForm = document.getElementById('choice-form');
             const form = choiceForm.querySelector('form');
@@ -26,7 +22,6 @@
             const player2Div = document.querySelector('.player2');
             const resetButton = document.getElementById('reset-button');
 
-            // Initialize game state variables
             let currentPlayer = 'X';
             let selectedCells = [];
             let player1Name = 'Player 1';
@@ -36,13 +31,11 @@
             resetButton.style.display = 'none';
 
 
-            // Function to start the game
             function initializeGame() {
                 startButton.style.display = 'none';
                 choiceForm.style.display = 'block';
             }
 
-            // Function to reset the game
             function resetGame() {
                 cells.forEach(cell => {
                     cell.textContent = '';
@@ -59,7 +52,6 @@
 
             }
 
-            // Function to handle form submission
             function handleFormSubmit(e) {
                 e.preventDefault();
                 const formData = new FormData(form);
@@ -81,7 +73,6 @@
                 });
             }
 
-            // Function to handle cell click
             function handleCellClick() {
                 const cell = this;
                 if (!selectedCells.includes(cell.id) && cell.textContent === '') {
@@ -99,7 +90,6 @@
                 }
             }
 
-            // Function to check if a player has won
             function checkWin(player) {
                 const winningCombos = [
                     [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -120,7 +110,6 @@
                 return false;
             }
 
-            // Function to check if the game is a draw
             function checkDraw() {
                 return selectedCells.length === 9;
             }
@@ -146,6 +135,5 @@
         });
     }
 
-    // Start the Tic Tac Toe game
     startTicTacToeGame();
 })();
