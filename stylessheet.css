@@ -8,6 +8,8 @@ body {
     background-color: rgb(247, 247, 247);
 }
 
+
+
 #game-board {
     display: grid;
     grid-template-columns: repeat(3, 150px);
@@ -15,7 +17,10 @@ body {
     justify-content: center;
     align-content: center;
     height: 100vh;
+
 }
+
+
 
 .cell {
     width: 100%;
@@ -50,11 +55,18 @@ body {
     font-size: 1rem;
     border-radius: 10px;
     text-align: center;
+    grid-column: 2/3;
 
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+.titlecont{
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
 }
 
 #choice-form {
@@ -108,15 +120,16 @@ label[for="player2name"] {
 }
 
 
-
+.ccc{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 .player1,
 .player2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     font-family: 'tekken', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     transition: color 0.3s, text-shadow 0.3s;
     text-shadow: 0 0 10px transparent;
@@ -128,13 +141,7 @@ label[for="player2name"] {
 
 
 
-.player1 {
-    left: 20px;
-}
 
-.player2 {
-    right: 20px;
-}
 
 
 #reset-button {
@@ -159,10 +166,34 @@ label[for="player2name"] {
 }
 
 
+.player1 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.player2 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gridd {
+    grid-column: 2 / 3;
+    grid-row: 1;
+
+}
+
 .title {
-    font-family: 'tekken',sans-serif;
+    font-family: 'tekken', sans-serif;
     text-align: center;
     font-size: 3rem;
+    grid-column: 2/3;
 }
 
 @font-face {
@@ -170,3 +201,26 @@ label[for="player2name"] {
     src: url(tarrget/tarrgetplatital.ttf) format('truetype');
 }
 
+
+.gridd {
+    grid-column: 2/3;
+}
+
+.contain {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+}
+
+
+@media screen and (max-width: 600px) {
+    /* Change the layout for smaller screens */
+    #game-board {
+        grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
+    }
+
+    .titlecont {
+        grid-template-columns: 1fr; /* Adjust the number of columns */
+    }
+
+    /* Add more responsive styles as needed */
+}

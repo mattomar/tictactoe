@@ -10,10 +10,11 @@
 </head>
 
 <body>
+    <div class="titlecont">
     <div class="title">Tic-Tac-Toe</div>
-    <div class="player1"></div>
-    <div class="player2"></div>
+
     <button id="start-button">Start Game</button>
+    </div>
     <button id="reset-button">Reset Game?</button>
 
     <div class="playerchoice" id="choice-form">
@@ -25,11 +26,15 @@
             <label>
                 <input type="radio" name="choice" value="O"> O
             </label>
-            <input type="text" name="player1name" placeholder="Player 1 Name" >
-            <input type="text" name="player2name" placeholder="Player 2 Name" >
+            <input type="text" name="player1name" placeholder="Player 1 Name">
+            <input type="text" name="player2name" placeholder="Player 2 Name">
             <button type="submit">Submit</button>
         </form>
     </div>
+    <div class="contain">
+        <div class="player1"></div>
+        <div class="player2"></div>
+        <div class="gridd">
     <div class="gameBoard">
         <div id="game-board" class="board">
             <div class="row">
@@ -49,6 +54,8 @@
             </div>
         </div>
     </div>
-
+    </div>
+    </div>
 </body>
+
 </html>
