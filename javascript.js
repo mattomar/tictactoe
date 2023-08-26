@@ -125,7 +125,6 @@
                 return selectedCells.length === 9;
             }
 
-            // Function to highlight the winner and reset the game
             function highlightWinner(player) {
                 if (player === player1Choice) {
                     player1Div.style.color = 'green';
@@ -138,7 +137,6 @@
                 setTimeout(resetGame, 1500);
             }
 
-            // Add event listeners
             startButton.addEventListener('click', initializeGame);
             resetButton.addEventListener('click', function () {
                 resetGame();
